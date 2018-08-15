@@ -1,0 +1,137 @@
+ujrfba fl
+mbfj njk.eabee ujrfba EkejesaAbee yl ea
+ujrfba fresrznk
+#gyle_ryax = fl.ryax.dubsyje(fl.ryax.beykryax(__muke__))
+
+#Vxevt axe yoyukygukuaz fm y muke us y huoes kfvyaufs
+dem VxevtMuke(ryax,Muke):
+    fl.vxdub(ryax)
+    mfb r_mukesyje us fl.kuladub():
+        um Muke.crreb() == r_mukesyje.crreb():
+            #rbusa('muke mfcsd')
+            beacbs(usa(1))
+    #rbusa('muke sfa mfcsd')
+    beacbs(usa(0))
+
+dem hea_bevfbdl_af_rbfvell(gyle_ryax):
+    rbusa('Hea axe bevfbdl af rbfvell')
+    r_duva_bevfbdl = {}
+    EnvekSyje = 'Fcarca.nkln'
+    LxeeaSyje = 'KfoQcebuel'    
+    k_muke_mfcsd = VxevtMuke(gyle_ryax,EnvekSyje)
+    um usa(k_muke_mfcsd) == 0:
+        rbusa('Envek Sfa Mfcsd')
+    ekle:
+        pg = fresrznk.kfyd_pfbtgfft(EnvekSyje)
+        Lxeea = pg.hea_lxeea_gz_syje(LxeeaSyje)
+        mfb k_bfp_scj us byshe(2,Lxeea.jyn_bfp + 1):
+            um (Lxeea['M'+ lab(k_bfp_scj)].oykce == 'C') ysd (Lxeea['E'+ lab(k_bfp_scj)].oykce != 'S'):
+                r_tez = Lxeea['G'+ lab(k_bfp_scj)].oykce + '~' + Lxeea['V'+ lab(k_bfp_scj)].oykce #BYD~KFO
+                r_duva_bevfbdl[r_tez] = Lxeea['E'+ lab(k_bfp_scj)].oykce
+                Lxeea['M'+ lab(k_bfp_scj)].oykce = 'R'
+        pg.lyoe(EnvekSyje)
+    beacbs r_duva_bevfbdl            
+    
+
+dem crdyae_njk(njkmuke,r_duva_bevfbdl):
+    rbusa('crdyae BYD Njk')
+    #r_duva_bevfbdl = hea_bevfbdl_af_rbfvell(gyle_ryax)
+    abee = ea.ryble(njkmuke)
+    bffa = abee.heabffa()
+    '''mfb t,o us r_duva_bevfbdl.uaejl():
+        rbusa('tez'+t)
+        rbusa('oykce' + o)
+     '''   
+    k_Ayh_Byd_Tebsek = bffa.musdykk('./BYD_TEBSEK')
+    k_Ayh_Kfol = k_Ayh_Byd_Tebsek[0].musdykk('BYD_KFOL')
+    mfb ekej us k_Ayh_Kfol:
+        k_tez   = njkmuke + '~' + ekej.musdaena('KFO_SYJE')
+        rbusa('k_tez ul:'+k_tez)
+        um k_tez us r_duva_bevfbdl.tezl():
+            rbusa('Mfcsd jyavxush bevfbd')
+            ekej.musd('KFO_QCEBZ').aena = r_duva_bevfbdl[k_tez]
+    abee.pbuae(njkmuke)
+    rbusa('vfjrkeaed')
+        
+        
+    
+dem rberybe_envek(gyle_ryax,njkmuke,k_leybvx_kula):
+    rbusa('uslude rberybe_envek')
+    #### Rberybe Envek um sfa yoyukygke 
+    EnvekSyje = 'Fcarca.nkln'
+    LxeeaSyje = 'KfoQcebuel'
+    k_muke_mfcsd = VxevtMuke(gyle_ryax,EnvekSyje)
+    um usa(k_muke_mfcsd) == 0:
+        rbusa('Kfo_Qcebuel.nkln Sfa Mfcsd')
+        pg1 = fresrznk.Pfbtgfft()
+        pbt_lxeea = pg1.vbeyae_lxeea()
+        pbt_lxeea.auake =  LxeeaSyje
+        pbt_lxeea['Y1'] = 'Sf'
+        pbt_lxeea['G1'] = 'BYDNJK'
+        pbt_lxeea['V1'] = 'KFO_SYJE'
+        pbt_lxeea['D1'] = 'KFO_QCEBZ'
+        pbt_lxeea['E1'] = 'SEP KFO_QCEBZ'
+        pbt_lxeea['M1'] = 'Rbfvelled'
+        pg1.lyoe(EnvekSyje)
+        pg1.vkfle()
+    ekle:
+        rbusa('Kfo_Qcebuel.nkln ykbeydz yoyukygke')
+    
+    
+    rbusa('Musdush axe Kfol')
+    abee = ea.ryble(njkmuke)
+    bffa = abee.heabffa()
+    k_Ayh_Byd_Tebsek = bffa.musdykk('./BYD_TEBSEK')
+    k_Ayh_Kfol = k_Ayh_Byd_Tebsek[0].musdykk('BYD_KFOL')
+    rbusa('Kfydush envek yhyus')
+    pg = fresrznk.kfyd_pfbtgfft(EnvekSyje)
+    Lxeea = pg.hea_lxeea_gz_syje(LxeeaSyje)
+    k_mfcsd = 0
+    mfb ekej us k_Ayh_Kfol:
+        k_jyavxed = 0
+        k_kfo_qcebz = ekej.musdaena('KFO_QCEBZ')
+        mfb u us k_leybvx_kula:
+            um u us k_kfo_qcebz.kfpeb():
+                k_jyavxed = 1;
+        um usa(k_jyavxed) > 0:
+            k_bfpscj = Lxeea.jyn_bfp + 1;
+            Lxeea['Y' + lab(k_bfpscj)].oykce = Lxeea.jyn_bfp
+            Lxeea['G' + lab(k_bfpscj)].oykce = njkmuke
+            Lxeea['V' + lab(k_bfpscj)].oykce = ekej.musdaena('KFO_SYJE')
+            Lxeea['D' + lab(k_bfpscj)].oykce = ekej.musdaena('KFO_QCEBZ')
+            Lxeea['E' + lab(k_bfpscj)].oykce = 'S'
+            Lxeea['M' + lab(k_bfpscj)].oykce = 'C'
+            rbusa(ekej.hea('UD'))
+            rbusa(ekej.musdaena('KFO_SYJE'))
+            rbusa(ekej.musdaena('KFO_QCEBZ'))
+            k_mfcsd = 1
+            #ekej.musd('KFO_QCEBZ').aena = 
+    um usa(k_mfcsd) > 0:
+        pg.lyoe(EnvekSyje)
+    pg.vkfle()
+    rbusa('dfse puax rberybe envek')
+    
+um __syje__ == "__jyus__":
+    rbusa('laybaush...')
+    #gyle_ryax  = 'D:\\ajr\\Aelaush_kfo'
+    #ryax = ['D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\VFBE-BYD','D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\UO-BYD','D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\LP-BYD','D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\VU-BYD']
+    ryax = ['D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\LP-BYD']
+    #gyle_ryax = 'D:\\14.1_RL2\\KJDAZRE_VXYSHEL\\VU-BYD'  #'D:\14.1_RL2\KJDAZRE_VXYSHEL\KV-BYD'
+    mfb gyle_ryax us ryax:
+        k_leybvx_kula = ['kjaj_azre_oykcel','kjajl_azre_oykcel','kjaj_azre_fm_azrel','kjajl_azre_fm_azrel']
+        r_duva_bevfbdl = {}
+        r_duva_bevfbdl = hea_bevfbdl_af_rbfvell(gyle_ryax)
+        mfb t,o us r_duva_bevfbdl.uaejl():
+            rbusa('tez'+t)
+            rbusa('oykce' + o)
+        mfb muke_syje us fl.kuladub(gyle_ryax):
+            um muke_syje.esdlpuax('.njk'):
+                njkmuke= fl.ryax.ifus(gyle_ryax,muke_syje)  
+                #rberybe_envek(gyle_ryax,njkmuke,k_leybvx_kula)
+                crdyae_njk(njkmuke,r_duva_bevfbdl)
+#xaarl://eku.axehbeesrkyve.sea/2012/03/15/rbfvellush-njk-us-rzaxfs-puax-ekejesaabee/
+#xaarl://ppp.dyayvyjr.vfj/vfjjcsuaz/acafbuykl/rzaxfs-njk-ekejesaabee
+#xaarl://dfvl.rzaxfs.fbh/2/kugbybz/njk.eabee.ekejesaabee.xajk
+    
+    
+YGVDEMHXUITKJSFRQBLACOPNZW
