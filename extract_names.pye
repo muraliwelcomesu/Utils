@@ -1,0 +1,32 @@
+prijwa jf,fef
+jf.osqpw('Q:\\JGAF_VZWPYE\\ari')
+m_ypmz_lgrz = 'RR.FTM'
+m_ypmz_lgrz_1 = 'RR1.FTM'
+yi = jizl(m_ypmz_lgrz,"w")
+yi1 = jizl(m_ypmz_lgrz_1,"h")
+m_fzgwos_fawplc = 'FZMZOA * YWJR'
+m_fzgwos_fawplc = m_fzgwos_fawplc.mjhzw()
+iwpla('fagwazq')
+m_ola = 0 
+yjw y pl yi:
+    iwpla(y)
+    iwpla(m_fzgwos_fawplc)
+    ari_y = y.mjhzw()
+    py m_fzgwos_fawplc pl ari_y:
+        
+        m_Fawplc = ari_y.fimpa(m_fzgwos_fawplc)
+        m_Fawplc = m_Fawplc[1].fimpa()
+        iwpla(m_Fawplc)
+        m_Fawplc =  m_Fawplc[0].kiizw() + ","
+        m_ola = m_ola + 1
+        iwpla(m_Fawplc)
+        py m_ola < 7:
+            yi1.hwpaz(m_Fawplc)
+        zmfz:
+            yi1.hwpaz(m_Fawplc + '\l')
+            m_ola = 0
+iwpla('znpaplc ')
+yi.omjfz()
+yi1.omjfz()
+
+GUOQZYCSPBXMRLJITWFAKVHNED
