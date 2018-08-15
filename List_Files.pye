@@ -1,0 +1,74 @@
+nqlkpj kc,cuzjns
+
+ixb fpnjx_jk_bnsx(l_sncj,bnsx_dvqx):
+    s_lvju = kc.lvju.inpdvqx(bnsx_dvqx)
+    s_bnsx_dvqx = kc.lvju.evcxdvqx(bnsx_dvqx)
+    kc.ruinp(s_lvju)
+    bl = klxd(bnsx_dvqx,"f")
+    bkp njxq nd l_sncj:
+        bl.fpnjx(njxq +'\d')
+    bl.rskcx()
+
+    
+ixb hxj_sncj_bnsxc(inp_dvqx,l_sncj_bnsxc):
+    lpndj('Ndcnix hxj_sncj_bnsxc'+ inp_dvqx)
+    bkp bnsx_dvqx nd kc.sncjinp(inp_dvqx):
+        lpndj(bnsx_dvqx)
+        nb kc.lvju.ncinp(kc.lvju.tknd(inp_dvqx,bnsx_dvqx)):
+            lpndj('Inpxrjkpm')
+            inp_dvqx_1 = kc.lvju.tknd(inp_dvqx,bnsx_dvqx)
+            lpndj('Pxrzpcngx rvss bkp Hxjjndh bnsxc nd '+inp_dvqx_1)
+            hxj_sncj_bnsxc(inp_dvqx_1,l_sncj_bnsxc)
+        xsnb kc.lvju.ncbnsx(kc.lvju.tknd(inp_dvqx,bnsx_dvqx)):
+            lpndj('Njy v bnsx..vii nj'+bnsx_dvqx)
+            l_sncj_bnsxc.vllxdi(kc.lvju.tknd(inp_dvqx,bnsx_dvqx))
+            #nb bnsx_dvqx.skfxp().xdicfnju('.clr'):
+                #l_sncj_bnsxc_clr.vllxdi(bnsx_dvqx)
+            #xscx:
+                #l_sncj_bnsxc_cws.vllxdi(bnsx_dvqx)
+                
+ixb hxj_bnsxc():
+            
+    inp = 'I:\\Fkpo\\KBCVV\\Cgd_Xajpvrj'
+    kc.ruinp(inp)
+    l_sncj_bnsxc = []
+    lpndj('hxjjndh hxj_sncj_bnsxc bpkq qvnd')
+    hxj_sncj_bnsxc(inp,l_sncj_bnsxc)
+    lpndj('ikdx..dkf jk lpndj CLR')
+    #bkp n nd l_sncj_bnsxc:
+        #lpndj(n)
+    fpnjx_jk_bnsx(l_sncj_bnsxc,'I:\\Fkpo\\KBCVV\\Jxcjndh_Cruxqv_lpxlvpx\\evroxdi_zdnjc.cws')
+    lpndj('rkqlsxjxi')
+
+ixb hxj_bnsxc_qkinbnxi_jnqx():
+    #cxvpru_inp = "A:\\BRZEC_12.3.0.0.0\\QVND\\IVJVEVCX\\KBCVV\\BNSXC\\IIS"
+    cxvpru_inp = "A:\\BRZEC_12.3.0.0.0_CZLLKPJ\\QVND\\IVJVEVCX\\KBCVV\\RKDCKS\\IIS\\JVESX"
+    kc.ruinp(cxvpru_inp)
+    bnsxc = bnsjxp(kc.lvju.ncbnsx, kc.sncjinp(cxvpru_inp))
+    bnsxc = [kc.lvju.tknd(cxvpru_inp, b) bkp b nd bnsxc] # vii lvju jk xvru bnsx
+    bnsxc.ckpj(oxm=svqeiv a: kc.lvju.hxjqjnqx(a))
+    kc.ruinp('I:\\Fkpo\\KBCVV\\Jxcjndh_Cruxqv_lpxlvpx')
+    bl = klxd("IIS_crpnljc.cws","f")
+    s_ixcj_inp = 'I:\\Fkpo\\KBCVV\\Jxcjndh_Cruxqv_lpxlvpx\\IIS'
+    bkp b nd bnsxc:
+        #lpndj(b)
+        cuzjns.rklm(b, s_ixcj_inp)
+        bl.fpnjx(kc.lvju.tknd(s_ixcj_inp, kc.lvju.evcxdvqx(b)) +'\d')
+    bl.rskcx()
+        
+nb __dvqx__ =='__qvnd__':
+    #hxj_bnsxc_qkinbnxi_jnqx();
+    #hxj_bnsxc();
+    s_inp = 'I:\\Fkpo\\KBCVV\\Jxcjndh_Cruxqv_lpxlvpx'
+    kc.ruinp(s_inp)
+    bnsx_pxvi = klxd("evroxdi_zdnjc.cws",'p')
+    bnsx_fpnjx = klxd("evroxdi_zdnjc_1.cws",'f')
+    bkp sndx nd bnsx_pxvi:
+        s_Cjp = 'lpkqlj " xaxrzjndh ' + kc.lvju.evcxdvqx(sndx).cjpnl("\d") + '"'
+        bnsx_fpnjx.fpnjx(s_Cjp+'\d')
+        bnsx_fpnjx.fpnjx('@"' + sndx.cjpnl("\d")+'"; \d')
+    bnsx_pxvi.rskcx()
+    bnsx_fpnjx.rskcx()
+        
+        
+VERIXBHUNTOSQDKLWPCJZGFAMY
