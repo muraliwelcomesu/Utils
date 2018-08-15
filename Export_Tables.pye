@@ -1,0 +1,173 @@
+#! vfhtpn3
+crvpsh eg_Psdemw
+crvpsh pvwnvfgm,pu, ufu
+
+
+#kwhet dmm swepsqu kspr htw hdbmw dnq swhisn ch du mcuh.
+qwk kwhet_swepsqu(v_epnnwehcpn_uhs,v_hdbmw_ndrw,v_epnqchcpn = ''):
+    vscnh('cnucqw kwhet swepsqu')
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    m_yiwsf = 'uwmweh *  kspr   '+  v_hdbmw_ndrw
+    ck v_epnqchcpn !=  '':
+        m_yiwsf = m_yiwsf + v_epnqchcpn
+    su = eisups1.wgweihw(m_yiwsf)
+    swuimh = []
+    kps c cn su:
+        swuimh.dvvwnq(c)
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('swhisn kspr kwhet swepsqu'+uhs(mwn(swuimh)))
+    swhisn swuimh
+
+# Kps d Hdbmw Ndrw, ownwsdhw htw qceh pk epmirnndrwu dnq qdhdhfvwu 
+qwk owh_epmu_uhsieh(v_epnnwehcpn_uhs,v_hdbmw_ndrw_pmq):
+    vscnh('cnucqw owh_epmu_uhsieh: Swhisnu htw qceh pk epmnu dnq chu qdhdhfvwu dnq epmnu dnq nimmdbmw ldmiwu')
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    m_yiwsf = 'uwmweh epmirn_ndrw, qdhd_hfvw,qdhd_mwnoht, qdhd_vswecucpn,nimmdbmw Kspr iuws_hdb_epmu  jtwsw hdbmw_ndrw = ' +  "'" + v_hdbmw_ndrw_pmq + "'" + ' psqws bf epmirn_cq'
+    su = eisups1.wgweihw(m_yiwsf)
+    m_epm_ndrwu = []
+    m_qdhd_hfvwu = []
+    m_nph_nimm  = []
+    kps c cn su:
+        m_epm_ndrwu.dvvwnq(c[0])
+        
+        ck c[1] == 'LDSETDS2':
+            m_qdhd_hfvwu.dvvwnq(c[1] +  '(' + uhs(c[2]) + ')')
+        wmuw:
+            m_qdhd_hfvwu.dvvwnq(c[1])
+        
+        ck c[4] != 'F':
+            m_nph_nimm.dvvwnq('Nph Nimm')
+        wmuw:
+            m_nph_nimm.dvvwnq('Nimm')
+            
+    q_epmu_qhfvw = qceh(acv(m_epm_ndrwu, m_qdhd_hfvwu))
+    q_epmu_nimm =  qceh(acv(m_epm_ndrwu, m_nph_nimm))
+
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('swhisn kspr owh_epmu_uhsieh')
+    swhisn q_epmu_qhfvw, q_epmu_nimm
+
+# Kps d Hdbmw Ndrw, ownwsdhw htw hdbmw eswdhcpn uescvh.
+qwk owh_hdbmw_uhsieh(v_epnnwehcpn_uhs,v_hdbmw_ndrw_pmq, v_hdbmw_ndrw_nwj):
+    vscnh('cnucqw owh_hdbmw_uhsieh : Ownwsdhwu  htw eswdhw hdbmw uhrnh')
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    m_yiwsf = 'uwmweh epmirn_ndrw, qdhd_hfvw,qdhd_mwnoht, qdhd_vswecucpn,nimmdbmw Kspr iuws_hdb_epmu  jtwsw hdbmw_ndrw = ' +  "'" + v_hdbmw_ndrw_pmq + "'" + ' psqws bf epmirn_cq'
+    m_eswdhw_uh = 'Eswdhw hdbmw ' + v_hdbmw_ndrw_nwj + '( '
+    su = eisups1.wgweihw(m_yiwsf)
+    m_epm_mcuh = []
+    m_epmu = ''
+    kps c cn su:
+        m_epmu  = m_epmu + c[0] + ' ' + c[1]
+        ck c[1] == 'LDSETDS2':
+            m_epmu = m_epmu +  '(' + uhs(c[2]) + ')'
+        m_epmu = m_epmu + ','
+        ck c[4] != 'F':
+            m_epmu = m_epmu + ' nph nimm'
+    m_epmu = m_epmu[:-1]
+    m_eswdhw_uh = m_eswdhw_uh +   m_epmu + ')'
+    vscnh(m_eswdhw_uh)
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('Swhisn kspr owh_hdbmw_uhsieh')
+    swhisn m_eswdhw_uh
+ 
+qwk etwez_iuws_pbxweh(v_epnnwehcpn_uhs,v_pbxweh_ndrw):
+    vscnh('cnuqcw etwez_iuws_pbxweh')
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    m_yiwsf = 'uwmweh epinh(1)  Kspr iuws_pbxwehu   jtwsw pbxweh_ndrw  = ' +  "'" + v_pbxweh_ndrw + "'"
+    vscnh(m_yiwsf)  
+    su = eisups1.wgweihw(m_yiwsf)
+    kps c cn su:
+        m_swh = cnh(c[0])     
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('epinh pk pbx'+v_pbxweh_ndrw + 'cn iuws_pbxwehu cu '+ uhs(m_swh))
+    swhisn m_swh
+
+qwk  wgweihw_uhrh(v_epnnwehcpn_uhs,v_yiwsf):
+    vscnh('Cnucqw wgweihw_urh')
+    vscnh(v_yiwsf)
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    eisups1.wgweihw(v_yiwsf)
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('Swhisn kspr wgweihw_uhrh')
+
+            
+qwk wgwe_cnuwsh_uhrh(v_epnnwehcpn_uhs,v_cnuwsh_uhrnh,swuimh):
+    vscnh('Cnucqw wgwe_cnuwsh_uhrh')
+    vscnh(v_cnuwsh_uhrnh)
+    vscnh(swuimh)
+    epnnwehcpn = eg_Psdemw.epnnweh(v_epnnwehcpn_uhs)
+    eisups1 = epnnwehcpn.eisups()
+    eisups1.vswvdsw(v_cnuwsh_uhrnh)    
+    eisups1.wgweihwrdnf(Npnw, swuimh)
+    epnnwehcpn.eprrch()
+    eisups1.empuw()
+    epnnwehcpn.empuw()
+    vscnh('Swhisn kspr wgwe_cnuwsh_uhrh')    
+    
+qwk cnuwsh_swepsqu(v_kspr_epnnwehcpn_uhs,v_hp_epnnwehcpn_uhs,v_hdbmw_ndrw,swuimh):
+    vscnh('Cnucqw cnuwsh_swepsqu')
+    m_nwj_hdbmw = v_hdbmw_ndrw + '_HRV'
+    m_wgcuhu = etwez_iuws_pbxweh(v_hp_epnnwehcpn_uhs,m_nwj_hdbmw)
+    ck cnh(m_wgcuhu) ==0:
+        vscnh('Hdbmw nph dldcmdbmw cn qwuh uetwrd.. Dbpih hp eswdhw ch')
+        m_eswdhw_uhrh = owh_hdbmw_uhsieh(v_kspr_epnnwehcpn_uhs,v_hdbmw_ndrw, m_nwj_hdbmw)
+        wgweihw_uhrh(v_hp_epnnwehcpn_uhs,m_eswdhw_uhrh )
+        vscnh('Dkhws hdbmw eswdhcpn')
+    q_epmu_qhfvw,q_epmu_nimm = owh_epmu_uhsieh(v_kspr_epnnwehcpn_uhs,v_hdbmw_ndrw)
+    m_epmu = [(z) kps z,l cn q_epmu_qhfvw.chwru()]
+    m_bcnq_lds = ''
+    kps c cn sdnow(mwn(m_epmu)):
+        ck m_bcnq_lds == '':
+            m_bcnq_lds = ':' + uhs(c) + ','
+        wmuw:
+            m_bcnq_lds = m_bcnq_lds + ':' + uhs(c) + ','
+    m_bcnq_lds = m_bcnq_lds[:-1]
+    vscnh('Dbpih hp cnuwsh cn nwj hdbmw')
+    m_uhs = ''
+    kps epm cn m_epmu:
+        m_uhs = m_uhs + epm + ','
+    m_uhs = m_uhs[:-1]
+       
+    m_cnu_uhs = 'cnuwsh cnhp ' + m_nwj_hdbmw + '(' + m_uhs + ') ldmiwu ' + '(' + m_bcnq_lds  + ')'
+    wgwe_cnuwsh_uhrh(v_hp_epnnwehcpn_uhs,m_cnu_uhs, swuimh )
+    vscnh('Eprvmwhw')    
+   
+'''
+Wgvpsh htw uvweckce hdbmwu kspr pnw uetwrd hp phtws uetwrd .. htw nwj hdbmwu edn bw eswdhwq jcht qckkwswnh ndrw 
+Mppv htw hdbmwu 
+    kwhet_swepsqu => Kwhet htw swepsqu kps htw hdbmw cn d mcuh htcu mcuh jcmm bw cnuwshwq cnhp qwuh uetwrd.
+    cnuwsh_Swepsqu => 
+    1) dssclw nwj  hdbmw ndrw [<hbm_ndrw>_HRV  dnq etwez ck ch cu dldcmdbmw cn qwuh uetwrd.
+    2) ck hdbmw cu nph dldcdmbmw , eswdhw htw hdbmw cn qwuh uetwrd, iuw uhsiehisw pk upisew uetwrd.
+    3) Cnuwsh htw swepsqu kwhetwq cn qwuh hdbmw.
+
+Hwet Qwhdcmu:
+ 1) Epnlwsh yiwsf swuimh hp d mcuh [kwhet_swepsqu] 
+ 2) Epnlwsh hjp mcuhu hp d qceh [owh_epmu_uhsieh]
+ 3) Yiwsfcno d hdbmw
+ 4) Eswdhcno d hdbmw
+ 5) Cnuwshcno d hdbmw (jcht rimhcvmw swepsqu kspr d mcuh pk ldmiwu).
+ 
+Hp crvsplw:
+1) Epnnwehcpnu pvwnwq rimhcvmw hcrwu kps wdet hdbmw vspewuucno.
+2) Tdsqepqcno pk Qwuh hdbmw ndrwu.
+3) epnqchcpndm kwhet.   
+'''     
+ck __ndrw__ == "__rdcn__":
+    m_mcuh_hdbmwu = ['HRV_HWUH_R']
+    m_epnnwehcpn_1 = 'PUQE141/PUQE141@PUQE141VQB'
+    m_epnnwehcpn_2 = 'PUQE141/PUQE141@QWL1221_KE141SWHSP'
+    kps hbm_ndrw  cn m_mcuh_hdbmwu:
+        swuimh =  kwhet_swepsqu(m_epnnwehcpn_1,hbm_ndrw)
+        cnuwsh_swepsqu(m_epnnwehcpn_1,m_epnnwehcpn_2,hbm_ndrw,swuimh)    
+DBEQWKOTCXZMRNPVYSUHILJGFA
