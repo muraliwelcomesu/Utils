@@ -1,0 +1,166 @@
+jmfw cmaaqt.mbocbhp qwifmp cmafibx
+jmfw cmaaqt.bmmfm qwifmp RPPIBmmfm
+jmfw cmaaqt.bmmfm qwifmp CMABmmfm
+qwifmp cmaaqt.mbocbhp
+jmfw th4 qwifmp TbucpqjcaHfci
+qwifmp fh
+
+lbj gbp_th4fte(cma):
+    #imqxp('hpump fj gbp_th4fte')
+ 
+    imfvd_hciifmp = cmaaqt.mbocbhp.ImfvdRuxlabm({'rppi' : 'zzz-imfvd-qln.qx.fmunab.nfw:80', 
+                                                 'rppih': 'zzz-imfvd-qln.qx.fmunab.nfw:80'})
+    fibxbm = cmaaqt.mbocbhp.tcqal_fibxbm(imfvd_hciifmp)
+    cmaaqt.mbocbhp.qxhpuaa_fibxbm(fibxbm)
+ 
+    pmd:
+        rpwa = cmafibx(cma)
+    bvnbip RPPIBmmfm uh b: #Iugb Xfp Jfcxl qx prb hbmkbm.
+        imqxp(b)
+    bvnbip CMABmmfm uh b:
+        imqxp(b)
+        imqxp('Hbmkbm Nfcal xfp tb Jfcxl')
+    bahb:
+        pmd:
+            #thFte = TbucpqjcaHfci(rpwa.mbul())
+            thFte = TbucpqjcaHfci(rpwa,"rpwa.iumhbm")#.bxnflb("cpj-8") 
+            #imqxp(thFte.rpwa)
+            #imqxp(thFte.r1)
+            #rpwa_pvp  = thFte.rpwa
+            #imqxp('Mbpcmx jmfw gbp_th4fte')
+        bvnbip UppmqtcpbBmmfm uh b:
+            mbpcmx Xfxb
+        mbpcmx thFte
+
+lbj hbumnr_qx_u_cma(cma,hbumnr_Hpmqxg):
+    #imqxp('Hpump fj Hbumnr qx {} jfm {} '.jfmwup(cma,hbumnr_Hpmqxg))
+    a_aqhp = []
+    thfte2 = gbp_th4fte(cma)
+    #imqxp(thfte2.imbppqjd())
+    pmd:
+        jfm iumu qx thfte2.jqxlUaa('i'):
+            qj hbumnr_Hpmqxg  qx iumu.pbvp:
+                #imqxp(cma,iumu.pbvp)
+                a_aqhp.uiibxl(iumu.pbvp)
+    bvnbip:
+        imqxp('hbumnr_qx_u_cma Bvnbipqfx fnncmbl qx imfnbhhqxg',cma)
+    mbpcmx a_aqhp
+
+lbj jx_gbp_imbjqv_cma(cma):
+    #imqxp('Hpump fj jx_gbp_imbjqv_cma')
+    #cma = 'rppih://lfnh.fmunab.nfw/nl/B86273_01/qxlbv.rpw'
+    a_hpm1 = 'rppih://lfnh.fmunab.nfw/'
+    a_aqhp = cma.hiaqp(a_hpm1)[1].hiaqp('/')[:-1]
+    a_aqhp1 = '/'.efqx(a_aqhp)
+    a_imbjqv = a_hpm1  + a_aqhp1 + '/'
+    #imqxp(a_imbjqv)
+    mbpcmx a_imbjqv
+
+    
+lbj gbp_fprbm_tffypqpab_aqxyh(cma):
+    #imqxp('Hpump fj Gbp fprbm aqxyh jfm',cma)
+    a_aqhp_cmah = []
+    thfte = gbp_th4fte(cma)
+    pmd:
+        a_imbjqv_cma = jx_gbp_imbjqv_cma(cma)
+        a_imbk_cma = '*'
+        jfm aqxyh qx thfte.jqxlUaa("lqk",{"nauhh":"tffypqpab"}):
+            jfm a qx aqxyh.jqxlUaa("u"):
+                qj 'rmbj' qx a.uppmh:
+                    a_xbz1 = a.uppmh['rmbj']
+                    a_cma = a_imbjqv_cma + a_xbz1
+                    qj (a_cma.hiaqp('.rpw')[0]) != a_imbk_cma:
+                        a_aqhp_cmah.uiibxl(a_cma)
+                        a_imbk_cma = a_cma.hiaqp('.rpw')[0]
+    bvnbip:
+         iuhh
+        #imqxp('gbp_fprbm_aqxyh bvnbipqfx qx jqxlqxg tffypqpab pug jfm',cma)
+        #imqxp(thfte.imbppqjd())
+    mbpcmx a_aqhp_cmah
+
+lbj gbp_fprbm_u_aqxyh(cma):
+    #imqxp('Hpump fj Gbp fprbm aqxyh jfm',cma)
+    a_aqhp_cmah = []
+    a_jfcxl = Juahb
+    thfte = gbp_th4fte(cma)
+    pmd:
+        a_imbjqv_cma = jx_gbp_imbjqv_cma(cma)
+        a_imbk_cma = '*'
+        jfm a qx thfte.jqxlUaa("u"):
+            qj 'rmbj' qx a.uppmh:
+                a_xbz1 = a.uppmh['rmbj'].hiaqp('./')[1]
+                a_cma = a_imbjqv_cma + a_xbz1
+                qj (a_cma.hiaqp('.rpw')[0]) != a_imbk_cma:
+                    a_aqhp_cmah.uiibxl(a_cma)
+                    a_imbk_cma = a_cma.hiaqp('.rpw')[0]
+    bvnbip:
+        iuhh
+        #imqxp('gbp_fprbm_aqxyh bvnbipqfx qx jqxlqxg gbp_fprbm_u_aqxyh pug jfm',cma)
+        #imqxp(thfte.imbppqjd())
+    mbpcmx a_aqhp_cmah
+
+lbj imfnbhh_cmah(aqhp_cma,a_hbumnr_jfm,imfnbhh_aqhp, hbumnr_aqhp):
+    imqxp('Hpump fj imfnbhh_cmah',hpm(abx(aqhp_cma)))
+    
+    jfm cma qx aqhp_cma:
+        imfnbhh_aqhp.uiibxl(cma)
+        imqxp('Imfnbhhqxg cma',cma)
+        
+        a_aqhp = hbumnr_qx_u_cma(cma,a_hbumnr_jfm)
+        
+        qj qxp(abx(a_aqhp)) > 0:
+            imqxp(a_aqhp)
+            imqxp('Jfcxl qx',cma)
+            hbumnr_aqhp.uiibxl(cma)
+            jfm a qx a_aqhp:
+                hbumnr_aqhp.uiibxl(a)
+                
+        a_fprbm_cmah = gbp_fprbm_tffypqpab_aqxyh(cma)
+        qj abx(a_fprbm_cmah) < 1:
+            a_fprbm_cmah = gbp_fprbm_u_aqxyh(cma)
+            
+        #imqxp(cma)
+        '''jfm q qx a_fprbm_cmah:
+            imqxp(q)'''
+        qj qxp(abx(a_fprbm_cmah)) > 0:
+            imfnbhh_cmah(a_fprbm_cmah,a_hbumnr_jfm,imfnbhh_aqhp,hbumnr_aqhp)
+    #imqxp('Mbpcmx jmfw imfnbhh_cmah')
+    
+        
+                     
+qj __xuwb__ =='__wuqx__':
+    a_aqhp_cmah = []
+    imqxp('Hpumpqxg....')
+    cma = 'rppih://lfnh.fmunab.nfw/nl/B94300_01/qxlbv.rpw'
+    a_kbmhqfx_nruxgb  = qxicp('Ncmmbxp kbmhqfx qh 14.1 Lf dfc zuxp pf nruxgb?  D/X')
+    qj a_kbmhqfx_nruxgb.ciibm() == 'D':
+        cma = qxicp('Bxpbm prb CMA fj chbm wuxcua')
+    a_hbumnr_Hpm = qxicp('Hbumnr Jfm:')
+    a_hbumnr_jfm = a_hbumnr_Hpm.ciibm()
+    #a_hbumnr_jfm = 'AWLPDIB'
+    a_aqhp_cmah.uiibxl(cma)
+    imfnbhh_aqhp = []
+    hbumnr_aqhp = []
+    imfnbhh_cmah(a_aqhp_cmah,a_hbumnr_jfm,imfnbhh_aqhp,hbumnr_aqhp)
+    a_jqab_xuwb = a_hbumnr_jfm + '_Mbhcaph.pvp'
+    
+    fh.nrlqm('L:\\pwi\\')
+    qj qxp(abx(imfnbhh_aqhp)) > 0:
+        jqab_zmqpb = fibx(a_jqab_xuwb,'z')
+        jfm q qx imfnbhh_aqhp:
+            jqab_zmqpb.zmqpb(q + '\x')
+        jqab_zmqpb.nafhb()
+        
+    a_afg_jqab =  a_hbumnr_jfm + '_Afg.pvp'
+    qj qxp(abx(hbumnr_aqhp)) > 0:
+        jqab_zmqpb = fibx(a_afg_jqab,'z')
+        jfm q qx hbumnr_aqhp:
+            jqab_zmqpb.zmqpb(q + '\x')
+        jqab_zmqpb.nafhb()
+
+    imqxp('Nfwiabpbl.. Mbhcaph ukuqautab qx L:\pwi' + a_hbumnr_jfm + '_afg.pvp' + a_hbumnr_jfm +  '_Mbhcaph.pvp')
+    
+    
+    
+    
+UTNLBJGRQEYAWXFIOMHPCKZVDS
