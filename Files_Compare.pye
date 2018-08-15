@@ -1,0 +1,51 @@
+abzwmp naksfbz,wh
+k_xann_naksh = []
+k_ksnp_wrke = []
+k_matyp_wrke = []
+k_xann_naks_ribs = 'X:\\wnhii_oraph_fwbzims\\xann.pcp'
+
+xsn umaps_pw_naks(z_kahp,naks_ribs,z_rob):
+    k_zipy = wh.zipy.xamribs(naks_ribs)
+    #k_naks_ribs = wh.zipy.gihsribs(naks_ribs)
+    wh.fyxam(k_zipy)
+    nz = wzsr(naks_ribs,"i")
+    an z_rob == 0:
+        nz.umaps('************************* Naksh  Xannsmsrp ar 12.4 hozzwmp irx 14.1 *************************\r')
+    skan z_rob == 1:
+        nz.umaps('************************* *Naksh rwp ar 14.1 *************************\r')
+    skan z_rob == 2:
+        nz.umaps('************************* Naksh rwp ar 12.4 hozzwmp *************************\r')
+    nwm apsb ar z_kahp:
+        nz.umaps(apsb +'\r')
+    nz.fkwhs()
+    
+xsn zmarp_xann_naksh(xfbz,xam1,xam2):
+    nwm ribs ar xfbz.xann_naksh:
+        k_xann_naksh.izzsrx('Bwxanasx Naksh - '+ ribs)
+        
+    nwm naks ar xfbz.ksnp_wrke:
+        k_ksnp_wrke.izzsrx('Xamsfpwme '+ xam1+ '   Naks Ribs   ' + naks)
+    
+    nwm naks ar xfbz.matyp_wrke:
+        k_matyp_wrke.izzsrx('Xamsfpwme '+ xam2+ '  Naks Ribs  ' +naks)
+    
+    nwm hog_xfbz ar xfbz.hogxamh.vikosh():
+        zmarp_xann_naksh(hog_xfbz,hog_xfbz.ksnp,hog_xfbz.matyp)
+
+xam1 = 'X:\\wnhii_oraph_fwbzims\\12.4_Hozzwmp'
+xam2 = 'X:\\wnhii_oraph_fwbzims\\14.1'
+xfbz = naksfbz.xamfbz(xam1,xam2)
+#xfbz.mszwmp_nokk_fkwhoms()
+zmarp_xann_naksh(xfbz,xam1,xam2) 
+    
+zmarp('Rwu zmarpart mshokph')
+zmarp('******************* Xannsmsrp ar 12.4 hozzwmp irx 14.1 **********************')
+zmarp(k_xann_naksh)
+umaps_pw_naks(k_xann_naksh,k_xann_naks_ribs,0)
+zmarp('***************Naksh rwp ar 14.1*******************************')
+zmarp(k_ksnp_wrke)
+umaps_pw_naks(k_ksnp_wrke,k_xann_naks_ribs,1)
+zmarp('*************************Naksh rwp ar 12.4 hozzwmp***********************')
+zmarp(k_matyp_wrke)
+umaps_pw_naks(k_matyp_wrke,k_xann_naks_ribs,2)
+IGFXSNTYADQKBRWZJMHPOVUCEL
